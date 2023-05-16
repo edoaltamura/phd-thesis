@@ -55,12 +55,16 @@ def mode(wavelength_mpc):
     mode_conversion = const.parsec * 1e6
     return 4 * np.pi / (wavelength_mpc * mode_conversion)
 
+  
+# Use the MNRAS style for the plot
+try:
+    plt.style.use("mnras.mplstyle")
+else:
+    print(('Matplotlib stylesheet `mnras.mplstyle` not found. You can download it from ' 
+           'https://github.com/edoaltamura/matplotlib-stylesheets - Reverting to default.'))
 
 # Define color palette
 palette_ref = ["#ef476f","#ffd166","#06d6a0","#A768FF"]
-
-# Use Matplotlib style
-plt.style.use("mnras.mplstyle")
 
 # Define redshifts and scale factors
 redshifts_p1 = np.logspace(0, 9, 100)
