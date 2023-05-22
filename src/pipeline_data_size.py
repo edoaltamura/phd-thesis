@@ -28,7 +28,7 @@ from matplotlib.lines import Line2D
 # Use the MNRAS style for the plot
 try:
     plt.style.use("mnras.mplstyle")
-else:
+except:
     print(('Matplotlib stylesheet `mnras.mplstyle` not found. You can download it from ' 
            'https://github.com/edoaltamura/matplotlib-stylesheets - Reverting to default.'))
 
